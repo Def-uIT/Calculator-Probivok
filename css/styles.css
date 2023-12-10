@@ -1,0 +1,52 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+main {
+    height: 400px;
+    width: 800px;
+    border: 2px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 50px;
+}
+
+input {
+    width: 120px;
+    height: 40px;
+}
+
+.column p {
+    font-size: 36px;
+}
+
+.tuple img {
+    width: 40px;
+    height: 40px;
+}
+
+.output p {
+    font-size: 36px;
+}
+
+button {
+    width: 110px;
+    height: 100px;
+}
+
+.tuple {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+}
