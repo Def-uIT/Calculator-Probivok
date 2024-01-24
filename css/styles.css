@@ -66,6 +66,7 @@ button {
 
 button:hover {
     background: #ffffff;
+    transition: 0.5s;
 }
 
 button:active {
