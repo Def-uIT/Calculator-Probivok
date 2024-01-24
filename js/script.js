@@ -11,6 +11,10 @@ playButton.addEventListener('click', () => {
     let totalDamageMin = 0;
     let totalDamageMax = 0;
 
+    if (!(attack && damageMax && damageMin && size && defence && hp)) {
+        return output.textContent = "Заполни все ячейки для подсчета пробивки!";
+    }
+
     if (attack > defence) {
         totalDamageMin = Math.floor((damageMin * size * (1 + (attack - defence) * 0.05))/hp);
         totalDamageMax = Math.floor((damageMax * size * (1 + (attack - defence) * 0.05))/hp);
