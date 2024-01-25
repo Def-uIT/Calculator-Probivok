@@ -11,8 +11,25 @@ playButton.addEventListener('click', () => {
     let totalDamageMin = 0;
     let totalDamageMax = 0;
 
-    if (!(attack && damageMax && damageMin && size && defence && hp)) {
-        return output.textContent = "Заполни все ячейки для подсчета пробивки!";
+    function checkInputData() {
+
+        if (!(attack && damageMax && damageMin && size && defence && hp)) {
+            return output.textContent = "Заполни все ячейки для подсчета пробивки!";
+        }
+
+        const stats = [attack, damageMin, damageMax, size, defence, hp];
+        for (let stat of stats) {
+            for (let element of stat) {
+                if ((isNaN(parseInt(element)))) {
+                    return output.textContent = "Введены некорректные значения";
+                }
+            }
+        }
+
+    }
+
+    if (checkInputData()) {
+        return output.textContent
     }
 
     if (attack > defence) {
