@@ -1,5 +1,9 @@
 let output = document.querySelector('.output p');
 const playButton = document.getElementById("playButton");
+const modsButtonLeft = document.getElementsByClassName("modsButton")[0];
+const modsButtonRight = document.getElementsByClassName("modsButton")[1];
+const modsPanelLeft = document.getElementsByClassName("modsPanel")[0];
+const modsPanelRight = document.getElementsByClassName("modsPanel")[1];
 
 playButton.addEventListener('click', () => {
     const attack = document.querySelector("#attack").value;
@@ -42,4 +46,21 @@ playButton.addEventListener('click', () => {
     }
 
     output.innerHTML = `Будет убито от <span style="color: red; font-size: 45px;">${totalDamageMin}</span> до <span style="color: red; font-size: 45px;">${totalDamageMax}</span> существ`;
+})
+
+modsButtonLeft.addEventListener('click', () => {
+    if (modsPanelLeft.style.opacity == 0) {
+        modsPanelLeft.style.opacity = 1;
+    } else {
+        modsPanelLeft.style.opacity = 0;
+    }
+    
+})
+
+modsButtonRight.addEventListener('click', () => {
+    if (modsPanelRight.style.opacity == 0) {
+        modsPanelRight.style.opacity = 1;
+    } else {
+        modsPanelRight.style.opacity = 0;
+    }
 })
