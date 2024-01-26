@@ -27,23 +27,31 @@ main {
     height: 400px;
     width: 200px;
     border: 2px solid black;
-    opacity: 0;
+    opacity: 1;
+    font-size: 28px;
 }
+
+.modsPanel p {
+    padding: 5px;
+}
+
 
 main #playButton {
     align-self: center;
 }
 
 input {
-    width: 50px;
+    width: 40px;
     height: 40px;
     font-size: 20px;
     text-align: center;
+    box-sizing: border-box;
 }
 
 .damage {
-    width: 50px;
+    width: 40px;
     height: 40px;
+    box-sizing: border-box;
 }
 
 .tuple_damage {
@@ -57,6 +65,7 @@ input {
 }
 
 .tuple img {
+    box-sizing: border-box;
     width: 40px;
     height: 40px;
 }
@@ -116,6 +125,18 @@ input {
     border-radius: 10px;
     cursor: pointer;
 }
+
+#brokenArrow {
+    background-image: url("../img/vecteezy_broken-arrow-illustration-vector_22981564.jpg");
+    background-size: cover;
+}
+
+#doubleArrow {
+    background-image: url("../img/2374733.png");
+    background-size: cover;
+}
+
+
 
 
 
