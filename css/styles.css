@@ -57,20 +57,22 @@ input {
     font-size: 36px;
 }
 
-button {
+#mainButton {
     width: 120px;
     height: 120px;
     border-radius: 100px;
     cursor: pointer;
 }
 
-button:hover {
-    background: #ffffff;
+.modsButton:hover,
+#mainButton:hover {
+    background-color: #ffffff;
     transition: 0.5s;
 }
 
-button:active {
-    background: #d8d8d8;
+.modsButton:active,
+#mainButton:active {
+    background-color: #d8d8d8;
     scale: 90%;
 }
 
@@ -84,3 +86,25 @@ button:active {
 #thisTuple {
     gap: 44px;
 }
+
+.title {
+    display: flex;
+    padding: 10px;
+    gap: 20px;
+}
+
+.modsButton {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: -20px;
+    background-image: url('../img/pngwing.com.png');
+    background-size: cover;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+
+
