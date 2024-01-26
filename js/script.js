@@ -10,6 +10,7 @@ playButton.addEventListener('click', () => {
     const hp = document.querySelector('#hp').value;
     let totalDamageMin = 0;
     let totalDamageMax = 0;
+    
 
     function checkInputData() {
 
@@ -39,7 +40,6 @@ playButton.addEventListener('click', () => {
         totalDamageMin = Math.floor((damageMin * size / (1 + (defence - attack) * 0.05))/hp);
         totalDamageMax = Math.floor((damageMax * size / (1 + (defence - attack) * 0.05))/hp);
     }
-    
-    output.textContent = `Будет убито от ${totalDamageMin} до ${totalDamageMax} существ`;
 
+    output.innerHTML = `Будет убито от <span style="color: red; font-size: 45px;">${totalDamageMin}</span> до <span style="color: red; font-size: 45px;">${totalDamageMax}</span> существ`;
 })

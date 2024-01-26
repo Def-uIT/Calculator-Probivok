@@ -106,5 +106,9 @@ input {
     cursor: pointer;
 }
 
+.totalDamageMin {
+    background-color: red;
+}
+
 
 
