@@ -43,11 +43,11 @@ playButton.addEventListener('click', () => {
     }
 
     if (attack >= defence) {
-        totalDamageMin = Math.floor((damageMin * size * (1 + (attack - defence) * 0.05))/hp);
-        totalDamageMax = Math.floor((damageMax * size * (1 + (attack - defence) * 0.05))/hp);
+        totalDamageMin = Math.floor(Math.floor((damageMin * size * (1 + (attack - defence) * 0.05)))/hp);
+        totalDamageMax = Math.floor(Math.floor((damageMax * size * (1 + (attack - defence) * 0.05)))/hp);
     } else {
-        totalDamageMin = Math.floor((damageMin * size / (1 + (defence - attack) * 0.05))/hp);
-        totalDamageMax = Math.floor((damageMax * size / (1 + (defence - attack) * 0.05))/hp);
+        totalDamageMin = Math.floor(Math.floor((damageMin * size * (1 + (defence - attack) * 0.05)))/hp);
+        totalDamageMax = Math.floor(Math.floor((damageMax * size * (1 + (defence - attack) * 0.05)))/hp);
     }
 
     output.innerHTML = `Будет убито от <span style="color: red; font-size: 45px;">${totalDamageMin}</span> до <span style="color: red; font-size: 45px;">${totalDamageMax}</span> существ`;
