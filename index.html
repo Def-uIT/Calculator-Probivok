@@ -10,9 +10,17 @@
 <body>
     <div class="modsPanel">
         <p>Модификаторы урона:</p>
-        <div class="tuple"><img id="brokenArrow" data-title="Стрелок: когда до цели больше половины арены, враг получает лишь половину обычного урона."><input type="checkbox"></div>
+        <div class="tuple">
+            <img id="brokenArrow" src="./img/vecteezy_broken-arrow-illustration-vector_22981564.jpg">
+            <input id="checkbox-1" class="checkbox" type="checkbox">
+            <label for="checkbox-1"></label>
+        </div>
         <br>
-        <div class="tuple"><img id="doubleArrow"><input class="checkbox" type="checkbox"></div>
+        <div class="tuple">
+            <img id="doubleArrow" src="./img/2374733.png">
+            <input id="checkbox-2" class="checkbox" type="checkbox">
+            <label for="checkbox-2"></label>
+        </div>
     </div>
     <main>
         <div class="column">
@@ -23,21 +31,21 @@
             <br>
             <div class="tuple">
                 <img title='Общий показатель атаки' src="./img/pngwing.com (6).png" alt="Общий показатель атаки">
-                <input id="attack">
+                <input oninput="clearOutput()" id="attack">
             </div>
             <br>
             <div class="tuple" id="thisTuple">
                 <img title='Общий показатель урона' src="./img/pngegg (1).png">
                 <div class="tuple_damage">
-                    <input id='damageMin' class="damage">
+                    <input oninput="clearOutput()" id='damageMin' class="damage">
                     <p>-</p>
-                    <input id='damageMax' class="damage">
+                    <input oninput="clearOutput()" id='damageMax' class="damage">
                 </div>
             </div>
             <br>
             <div class="tuple">
                 <img title='Количество существ в стеке' src="./img/noble-knight-filled-icon-910411.png">
-                <input id='size'>
+                <input oninput="clearOutput()" id='size'>
             </div>
         </div>
         <div id="playButton">
@@ -51,12 +59,12 @@
             <br>
             <div class="tuple">
                 <img title='Общий показатель защиты' src="./img/pngegg.png">
-                <input id="defence">
+                <input oninput="clearOutput()" id="defence">
             </div>
             <br>
             <div class="tuple">
                 <img title='Общий показатель ХП' src="./img/free-icon-heart-101224.png">
-                <input id="hp">
+                <input oninput="clearOutput()" id="hp">
             </div>
         </div>
         <div class="output">

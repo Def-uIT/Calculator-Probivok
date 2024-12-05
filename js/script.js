@@ -5,6 +5,10 @@ const modsButtonRight = document.getElementsByClassName("modsButton")[1];
 const modsPanelLeft = document.getElementsByClassName("modsPanel")[0];
 const modsPanelRight = document.getElementsByClassName("modsPanel")[1];
 
+function clearOutput() {
+    output.style.opacity = '0';
+}
+
 playButton.addEventListener('click', () => {
     const attack = document.querySelector("#attack").value;
     const damageMin = document.querySelector('#damageMin').value;
@@ -14,6 +18,7 @@ playButton.addEventListener('click', () => {
     const hp = document.querySelector('#hp').value;
     let totalDamageMin = 0;
     let totalDamageMax = 0;
+    output.style.opacity = '1';
     
 
     function checkInputData() {
@@ -37,7 +42,7 @@ playButton.addEventListener('click', () => {
         return output.textContent
     }
 
-    if (attack > defence) {
+    if (attack >= defence) {
         totalDamageMin = Math.floor((damageMin * size * (1 + (attack - defence) * 0.05))/hp);
         totalDamageMax = Math.floor((damageMax * size * (1 + (attack - defence) * 0.05))/hp);
     } else {
